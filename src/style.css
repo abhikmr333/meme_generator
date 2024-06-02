@@ -5,7 +5,6 @@ body {
 
 .Header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: red;
     color: white;
@@ -13,7 +12,7 @@ body {
 }
 
 .Header--name {
-    margin-left: 30px;
+    margin-left: 5px;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -2px;
@@ -22,11 +21,12 @@ body {
 .Header--trollimg {
     width: 30px;
     height: 26px;
-    margin-right: 10px;
+    margin-left: 30px;
 }
 
 .Header--project {
     margin-right: 30px;
     font-weight: 500;
     line-height: 15px;
+    margin-left: auto;
 }
