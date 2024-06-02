@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-.Header {
+.header {
     display: flex;
     align-items: center;
     background-color: red;
@@ -11,20 +11,20 @@ body {
     background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
 }
 
-.Header--name {
+.header--name {
     margin-left: 5px;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -2px;
 }
 
-.Header--trollimg {
+.header--trollimg {
     width: 30px;
     height: 26px;
     margin-left: 30px;
 }
 
-.Header--project {
+.header--project {
     margin-right: 30px;
     font-weight: 500;
     line-height: 15px;
