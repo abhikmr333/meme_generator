@@ -1,0 +1,32 @@
+body {
+    font-family: Karla, sans-serif;
+    margin: 0;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    color: white;
+    background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+}
+
+.Header--name {
+    margin-left: 30px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -2px;
+}
+
+.Header--trollimg {
+    width: 30px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.Header--project {
+    margin-right: 30px;
+    font-weight: 500;
+    line-height: 15px;
+}
