@@ -12,21 +12,91 @@ body {
 }
 
 .header--name {
-    margin-left: 5px;
+    margin-left: 0.3rem;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -2px;
 }
 
 .header--trollimg {
-    width: 30px;
-    height: 26px;
-    margin-left: 30px;
+    width: 2rem;
+    height: 1.8rem;
+    margin-left: 1.8rem;
 }
 
 .header--project {
-    margin-right: 30px;
+    margin-right: 1.8rem;
     font-weight: 500;
     line-height: 15px;
     margin-left: auto;
+}
+
+.Meme--top-label,
+.Meme--top-field {
+    display: flex;
+    direction: column;
+}
+
+.Meme--bottom-label,
+.Meme--bottom-field {
+    display: flex;
+    direction: column;
+}
+
+.Meme--input-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Meme--button-image {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.Meme--top-field {
+    width: 14rem;
+    height: 1.3rem;
+    padding: 7.37px 10.64px 7.37px 10.64px;
+    border-radius: 4.91px 0px 0px 0px;
+    border: 0.82px 0px 0px 0px;
+    opacity: 0px;
+    border: 0.8px solid #d1d5db;
+}
+
+.Meme--bottom-field {
+    width: 14rem;
+    height: 1.3rem;
+    padding: 7.37px 10.64px 7.37px 10.64px;
+    gap: 6.55px;
+    border-radius: 4.91px 0px 0px 0px;
+    border: 0.82px 0px 0px 0px;
+    opacity: 0px;
+    border: 0.8px solid #d1d5db;
+}
+
+.Meme--button {
+    width: calc(12rem * 3);
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+    font-weight: 700;
+    size: 16px;
+    color: white;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.3rem;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.Meme--button-image {
+    margin-left: 0.3rem;
+}
+
+form {
+    margin-top: 2rem;
 }
