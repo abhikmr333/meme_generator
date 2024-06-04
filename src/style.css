@@ -97,6 +97,17 @@ body {
     margin-left: 0.3rem;
 }
 
-form {
+.Meme {
+    margin-top: 2rem;
+}
+
+.Meme--image {
+    width: calc(12rem * 3);
+    height: 29rem;
+}
+
+.Meme--image-container {
+    display: flex;
+    justify-content: center;
     margin-top: 2rem;
 }
