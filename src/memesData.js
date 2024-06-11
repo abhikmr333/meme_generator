@@ -1,4 +1,7 @@
 //meme data from postman
+
+//from this api - https://api.imgflip.com/get_memes
+
 export default {
     success: true,
     data: {

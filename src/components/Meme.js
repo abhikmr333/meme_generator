@@ -1,6 +1,6 @@
 //Meme component - Form
-import React, { useState } from "react";
-import memesData from "../memesData.js";
+import React, { useState, useEffect } from "react";
+// import memesData from "../memesData.js";
 
 export default function Meme() {
     //new state with initial value as meme object
@@ -11,16 +11,28 @@ export default function Meme() {
         randomImage: "https://i.imgflip.com/1bij.jpg",
     });
 
-    //new state which defaults to the imported memesData above
-    //why this one in state? Assuming more memes get added later down the line using setAllMemeImages
-    const [allMemeImages, setAllMemeImages] = useState(memesData);
+    //making an Api call to get the meme data
+    const [allMemes, setAllMemes] = useState([]);
+
+    //no dependencies because we want this to fetch the data only once so empty array as second parameter
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then((response) => {
+                if (!response.ok) throw new Error("Not Found!");
+                return response.json();
+            })
+            .then((result) => {
+                //when you get the data back update the state of setAllMemes with result.data.memes array
+                setAllMemes(() => {
+                    return [...result.data.memes];
+                });
+            });
+    }, []);
 
     function getMemeImage() {
         //extract a random image when button clicked
-        const memesArray = allMemeImages.data.memes;
-        const random = Math.floor(Math.random() * memesArray.length);
-        const url = memesArray[random].url;
-
+        const random = Math.floor(Math.random() * allMemes.length);
+        const url = allMemes[random].url;
         //and call the setter function to update image
         setMeme((prevMeme) => {
             return {
@@ -37,7 +49,7 @@ export default function Meme() {
             return { ...prevMeme, [name]: value };
         });
     }
-    console.log(meme.topText + " " + meme.bottomText);
+    console.log("comoponent rendered!");
     return (
         <main className="Meme">
             <section className="Meme--input-section">
